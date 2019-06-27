@@ -1,0 +1,15 @@
+{
+  "predef": [
+    "document",
+    "window",
+    "describe",
+    "it",
+    "before",
+    "after",
+    "beforeEach",
+    "afterEach"
+  ],
+  "node": true,
+  "esversion": 6,
+  "expr": true
+}
