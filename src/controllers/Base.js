@@ -17,7 +17,7 @@ class Base {
     const url = `${API_BASE_URI}${GET_EMPLOYEES_PATH}`;
 
     this.httpClient.get(url)
-      .then((response) => {this.printEmployees(response.data)})
+      .then((response) => this.printEmployees(response.data))
       .catch((error) => {
         if (error.response) {
           this.modal.setModal(error.response.data, error.response.status);
@@ -32,7 +32,22 @@ class Base {
   }
 
   printEmployees(employees) {
+    const table = document.querySelector('.table-hover');
 
+    employees.forEach((employee) => {
+      const row = document.createElement('tr');
+
+      for (let attribute in employee) {
+        if (employee.hasOwnProperty(attribute)) {
+          const cell = document.createElement('td');
+          cell.classList.add('text-center');
+          cell.innerText = employee[attribute];
+          row.appendChild(cell);
+        }
+      }
+
+      table.appendChild(row);
+    });
   }
 }
 

@@ -2,7 +2,7 @@ class Modal {
   constructor() {
     this.modal = document.querySelector('#myModal');
     this.header = document.querySelector('.modal-header h2');
-    this.body = document.querySelector('.modal-body p');;
+    this.body = document.querySelector('.modal-body p');
     this.setCloseModalEvent();
   }
 
