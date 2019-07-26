@@ -11,17 +11,17 @@
 <table class="table-fill">
   <thead>
   <tr>
-    <th class="text-left">Id</th>
-    <th class="text-left">Name</th>
-    <th class="text-left">Salary</th>
-    <th class="text-left">Age</th>
-    <th class="text-left">Image</th>
+    <th class="text-center">Id</th>
+    <th class="text-center">Name</th>
+    <th class="text-center">Salary</th>
+    <th class="text-center">Age</th>
+    <th class="text-center">Image</th>
   </tr>
   </thead>
   <tbody class="table-hover">
   </tbody>
 </table>
-<div id="myModal" class="modal">
+<div id="footer" class="modal">
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
@@ -29,6 +29,24 @@
     </div>
     <div class="modal-body">
       <p></p>
+    </div>
+  </div>
+</div>
+<div id="popup" class="modal">
+  <div class="popup-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Employee Details</h2>
+    </div>
+    <div class="popup-body">
+      <form>
+        <label for="id">Id</label><input id="id" name="id" type="number" disabled>
+        <label for="employee_name">Name</label><input id="employee_name" name="name" type="text">
+        <label for="employee_salary">Salary</label><input id="employee_salary" name="salary" type="number">
+        <label for="employee_age">Age</label><input id="employee_age" name="age" type="number">
+        <label for="profile_image">Image</label><input id="profile_image" name="profile_image" type="number">
+        <button type="button" value="Submit"></button>
+      </form>
     </div>
   </div>
 </div>
