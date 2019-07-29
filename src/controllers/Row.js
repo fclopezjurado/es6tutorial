@@ -1,5 +1,6 @@
 import {EMPLOYEE_ID_ATTR} from "../config/constants";
 import ApiClient from "../services/api/ApiClient";
+import {ModalPopup, UPDATE_BUTTON_TEXT} from "../services/modals/ModalPopup";
 
 class Row {
   constructor() {}
@@ -24,6 +25,12 @@ class Row {
     row.addEventListener('click', () => {
       const idCell = row.querySelector('[data-id]');
       const id = idCell.getAttribute('data-id');
+      const modalPopup = ModalPopup.instance(UPDATE_BUTTON_TEXT, ApiClient.instance.updateEmployee);
+
+      modalPopup.setSubmitButton(UPDATE_BUTTON_TEXT, ApiClient.instance.updateEmployee);
+      modalPopup.changeIdFieldVisibility(true);
+      modalPopup.changeDeleteButtonVisibility(true);
+      modalPopup.setDeleteButton();
       ApiClient.instance.getEmployee(id);
     });
   }

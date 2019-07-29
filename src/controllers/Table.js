@@ -7,7 +7,11 @@ class Table {
     const table = document.querySelector('.table-hover');
     const row = new Row();
 
-    employees.forEach((employee) => {
+    while (table.firstChild) {
+      table.removeChild(table.firstChild);
+    }
+
+    employees.reverse().forEach((employee) => {
       const row$ = document.createElement('tr');
       row.print(row$, employee);
       row.onClick(row$);

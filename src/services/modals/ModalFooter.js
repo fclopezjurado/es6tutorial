@@ -11,7 +11,6 @@ class ModalFooter extends BaseModal {
     const modal = document.querySelector('#footer');
 
     super(modal);
-    this.header = document.querySelector('.modal-header h2');
     this.body = document.querySelector('.modal-body p');
   }
 
@@ -23,8 +22,7 @@ class ModalFooter extends BaseModal {
     return this[singleton];
   }
 
-  setModal(body, header) {
-    this.header.innerHTML = `ERROR ${header}`;
+  setModal(body) {
     this.body.innerHTML = body;
   }
 

@@ -35,6 +35,23 @@ class HttpClient {
   put(url, data) {
     return this._axios.put(url, data);
   }
+
+  /**
+   * @param {String }url
+   * @param {Object} data
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  post(url, data) {
+    return this._axios.post(url, data);
+  }
+
+  /**
+   * @param {String }url
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  delete(url) {
+    return this._axios.delete(url);
+  }
 }
 
 export default HttpClient;
