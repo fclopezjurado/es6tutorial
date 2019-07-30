@@ -2,15 +2,14 @@
 
 ## Requirements
 
-* Node Package Manager v3.10.10 o superior (`npm`)
-
-> **Note**: Is recommended [*Node Version Manager*](https://github.com/creationix/nvm) (`nvm`).
+* [NodeJs last version](https://nodejs.org/es/download/). You can download a package for your SO. It's easy to install.
+* [NPM](https://www.npmjs.com/). It's included in NodeJs install.
 
 ## Setup
 
 ```
-$ git clone git@this-repo-url.git
-$ cd this-repo-folder
+$ git clone git@https://github.com/fclopezjurado/es6tutorial.git
+$ cd es6tutorial
 $ npm install
 ```
 
@@ -33,15 +32,3 @@ $ npm run build
 ```
 
 built files in `./dist`.
-
-### Test Drive Development
-
-```
-$ npm run tdd
-```
-
-### Test & testing coverage
-
-```
-$ npm test
-```
